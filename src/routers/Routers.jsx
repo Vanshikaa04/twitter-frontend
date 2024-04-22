@@ -6,7 +6,7 @@ export const MainRouter = () => {
 
     const routesData = createBrowserRouter([
         {
-            path : ' ',
+            path : '',
             element:<HomeScreen/>,
             errorElement:<div>Error 404</div>
         }

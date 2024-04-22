@@ -1,4 +1,3 @@
-import Homescreen from './components/homescreen/Homescreen';
 import { MainRouter } from './routers/Routers';
 
 
