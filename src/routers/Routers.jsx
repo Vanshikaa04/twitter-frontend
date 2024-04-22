@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import HomeScreen from '../components/homescreen/Homescreen'
+import Homescreen from '../components/homescreen/Homescreen'
 
 export const MainRouter = () => {
 
