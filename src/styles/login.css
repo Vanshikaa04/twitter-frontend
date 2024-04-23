@@ -146,6 +146,8 @@ body {
 .login__submit:hover {
 	border-color: #434344;
 	outline: none;
+	background-color:  rgb(60, 151, 241);
+	color: white;
 }
 
 .button__icon {

@@ -11,8 +11,6 @@ const HomeScreen = () => {
        <Sidebar/>
        <Post />
        <Notify/>
-       
-      
       </div>
     );
   };
