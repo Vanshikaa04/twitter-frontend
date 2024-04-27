@@ -23,7 +23,7 @@ export const MainRouter = () => {
             element:<HomeScreen/>,
             errorElement:<div>Error 404</div>
         },
-        {
+       {
             path : '/signup',
             element:<Signup/>,
             errorElement:<div>Error 404</div>

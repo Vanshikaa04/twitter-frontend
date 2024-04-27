@@ -5,3 +5,17 @@
     flex-direction: row;
     
 }
+.nonscroll{
+    /* background-color: rgb(55, 255, 0); */
+    position: fixed;
+    width:30%;
+
+}
+.scroll_content{
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    height: fit-content;
+    overflow-y: auto;
+    margin-left: 30%;
+}

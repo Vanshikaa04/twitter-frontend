@@ -8,9 +8,13 @@ import Notify from './../notification/Notify';
 const HomeScreen = () => {
     return (
       <div className="main">
-       <Sidebar/>
-       <Post />
-       <Notify/>
+        <div className="nonscroll">
+           <Sidebar/>
+       </div>
+       <div className="scroll_content">
+          <Post />
+          <Notify/>
+       </div>
       </div>
     );
   };

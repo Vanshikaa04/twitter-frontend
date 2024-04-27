@@ -1,4 +1,200 @@
 .notifymain{
-    border: 1px solid black;
+    border: 1px solid rgba(220, 218, 218, 0.5);  
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    height: fit-content;
+}
+.search{
+    /* border: 1px solid black; */
+    width:80%;
+    border-radius: 20px;
+    height:6vh;
+    background-color: rgba(218, 218, 225, 0.728);
+    opacity: 0.7;
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+    position: relative;
+}
+.search_input{
+    position: absolute;
+    top:0rem;
+    left:3rem;
+    width: 85%;
+    height: 5.5vh;
+    border-radius: 15px;
+    background-color: rgba(218, 218, 225, 0.428);
+    color: black;
+    border:none;
+    outline: none;
+    font-size: 16px;
+}
+.search:focus-within{
+    border: 1px solid rgb(58, 112, 239);
+    background-color: white;
+}
+ .search_input:active , .search_input:focus{
+   outline:none;
+   border:1px solid white;
+   background-color: white;
+}
+.search_icon{
+color: black;
+position: absolute;
+top:0.4rem;
+left:0rem;
+}
+.search:focus-within .search_icon{
+    color:rgb(58, 112, 239);
+}
+
+                    /*  Subscribe Section */
+.subscribe{
+    border: 1px solid  rgba(220, 218, 218, 0.5);  
+    width:80%;
+    border-radius: 20px;
+    height:fit-content;
+    opacity: 0.7;
+    margin-left: 3rem;
+    margin-top: 1.7rem;
+   display: flex;
+   flex-direction: column;
+}
+.heading{
+    width:70%;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+    /* border: 1px solid black; */
+}
+.sub_para{
+    /* border: 1px solid black; */
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+    font-size: 16.5px;
+    margin-left: 2.5rem;
+    text-align:left;
+}
+
+.sub_button{
+    width:35%;
+    height:5vh;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 17px;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+}
+
+                    /*Trends Section  */
+.trends{
+    border: 1px solid  rgba(220, 218, 218, 0.5);  
+    width:80%;
+    border-radius: 20px;
+    height:fit-content;
+    opacity: 0.7;
+    margin-left: 3rem;
+    margin-top: 1.7rem;
+   display: flex;
+   flex-direction: column;
+}
+.t_heading{
+    width:70%;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 1rem;
+    margin-left: -2rem;
+}
+.trend_lists{
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.2rem;
+    margin-left: 0.4rem;
+    padding:0.6rem;
+    text-align: left;
+    /* border: 1px solid black; */
+}
+.trend_lists:hover{
+    background-color: rgb(236, 233, 233);
+}
+.type{
+    color:rgb(57, 56, 56);
+    font-size: 14px;
+}
+.title{
+    color: black;
+    font-weight: bold;
+
+}
+
+/* recommendation */
+
+.recommends{
+    border: 1px solid  rgba(220, 218, 218, 0.5);  
+    width:80%;
+    border-radius: 20px;
+    height:fit-content;
+    opacity: 0.7;
+    margin-left: 3rem;
+    margin-top: 1.7rem;
+    margin-bottom: 1rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.reommend_acc{
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.2rem;
+    margin-left: 0.4rem;
+    padding:0.6rem;
+    text-align: left;
+}
+.useracc{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.uprofile{
+    background-color: rgb(80, 170, 244);
+    margin-top: 0.7rem;
+    margin-left:0.7rem;
+    padding:1px;
+    width:17%;
+    height: 5vh;
+    border-radius: 49%;
+}
+.username{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.4rem;
+    margin-top: 0.3rem;
+}
+.uid{
+    color:grey;
+    font-size: 14px;
+    font-weight: normal;
+}
+.followbtn{
+    flex: 0.5;
+    background-color: black;
+    color: white;
+    border-radius: 22px;
+    height:5vh;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+    margin-top: 0.6rem;
 }
