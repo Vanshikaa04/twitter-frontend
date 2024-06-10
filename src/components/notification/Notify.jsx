@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/notify.css";
-const Notify = () => {
+
+export const Notify = () => {
   return (
     <>
       <div className="notifymain">
@@ -82,5 +83,3 @@ const Notify = () => {
     </>
   );
 };
-
-export default Notify;

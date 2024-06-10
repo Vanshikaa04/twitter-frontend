@@ -9,23 +9,22 @@ import axios from 'axios';
 
 
 
-const Login = () => {
+export const Login = () => {
 	const { register, handleSubmit, formState: { errors } } = useForm({
 		mode: onclick
 	})
 	const navigate = useNavigate()
 	const onSubmit = async (data) => {
-		console.log(data)
-		var loginData = {
-			email: data.email,
-			password: data.password,
-		}
+		console.log("data from form  ->",data);
+		var loginData = {};
+		loginData.email = data.email;
+		loginData.password = data.password;
 		try {
-            const response = await axios.post('http://localhost:3000/user/login', loginData);
+            const response = await axios.post('http://localhost:3008/user/login', loginData);
             // is authenticated user
             if (response.status === 200) {
 				console.log("response",response.data.data.token)
-                Cookies.set('token', response.data.data.token, { expires: 1 })  // day expiry
+                Cookies.set('token', response.data.data.token, { expires: 1 }) 
 				navigate("/home")
             }
         } catch (error) {
@@ -80,4 +79,3 @@ const Login = () => {
 	)
 }
 
-export default Login

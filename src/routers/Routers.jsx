@@ -1,9 +1,9 @@
 import React, { Children } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Login from '../components/login/Login'
-import Signup from '../components/signup/Signup'
+import {Login} from '../components/login/Login'
+import {Signup} from '../components/signup/Signup'
 
-import HomeScreen from '../components/homescreen/Homescreen'
+import {HomeScreen} from '../components/homescreen/Homescreen'
 
 export const MainRouter = () => {
 

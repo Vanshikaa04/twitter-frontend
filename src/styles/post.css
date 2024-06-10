@@ -1,6 +1,7 @@
 .postmain{
     /* border: 1px solid  rgba(220, 218, 218, 0.5);   */
     flex: 1;
+    flex-direction: column;
     
 }
 .feedopt{
@@ -42,15 +43,12 @@ border-radius: 3px;
     align-content: center;
 }
 .profile{
-   
-    background-color: rgb(80, 170, 244);
-    margin-top: 0.7rem;
     margin-left:0.7rem;
     padding:1px;
-    width:9%;
-    height: 5vh;
+    width:12%;
+    height: 9vh;
     border-radius: 49%;
-    /* flex:1; */
+    background-color: black;
 }
 .textinput{
     width:100%;

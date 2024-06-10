@@ -3,13 +3,11 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
-    
 }
 .nonscroll{
     /* background-color: rgb(55, 255, 0); */
     position: fixed;
     width:30%;
-
 }
 .scroll_content{
     display: flex;
@@ -18,4 +16,5 @@
     height: fit-content;
     overflow-y: auto;
     margin-left: 30%;
+    scroll-behavior: smooth;
 }
