@@ -1,11 +1,12 @@
+import { UserProvider } from './components/context/UserContext';
 import { MainRouter } from './routers/Routers';
 
 
 function App() {
   return (
-    <>
-      <MainRouter/>
-    </>
+    <UserProvider>
+      <MainRouter />
+    </UserProvider>
   );
 }
 

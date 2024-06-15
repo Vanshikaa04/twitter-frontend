@@ -78,10 +78,10 @@ ul{
 .pfp{
     align-self: center;
     background-color: rgb(80, 170, 244);
-    width:25%;
+    width:30%;
     margin-left: 1rem;
     height: 9vh;
-    border-radius: 50%;
+    border-radius: 51%;
     border-color: red;
 }
 .id{

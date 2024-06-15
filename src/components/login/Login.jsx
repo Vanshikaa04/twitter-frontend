@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import Cookies from 'js-cookie';
 import axios from 'axios';
+import { useUser } from '../context/UserContext';
 
 
 
@@ -23,7 +24,7 @@ export const Login = () => {
             const response = await axios.post('http://localhost:3008/user/login', loginData);
             // is authenticated user
             if (response.status === 200) {
-				console.log("response",response.data.data.token)
+				console.log("response from login api",response.data.data)
                 Cookies.set('token', response.data.data.token, { expires: 1 }) 
 				navigate("/home")
             }

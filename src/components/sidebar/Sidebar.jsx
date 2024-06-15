@@ -3,11 +3,11 @@ import "../../styles/sidebar.css";
 import axios from "axios";
 import Cookies from "js-cookie";
 import defImg from '../../images/default.jpg'
+import { useUser } from '../context/UserContext';
 
 export const Sidebar = () => {
-  const [fName, setFName] = useState([])
-  const [lName, setLName] = useState([])
-  const [profile, setProfile] = useState('')
+  // context
+  const user = useUser();
 
   const handleProfilePictureClick = () => {
     document.getElementById('profilePicInput').click();
@@ -32,30 +32,6 @@ export const Sidebar = () => {
       }
     }
   }
-  const getUserDetails = async () => {
-    const token = Cookies.get('token')
-    console.log('token in sidebar', token)
-
-    try {
-      const response = await axios.get('http://localhost:3008/user/details', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-      console.log('response ', response)
-      console.log('response ', response?.data?.user?.first_name)
-      setFName(response?.data?.user?.first_name)
-      setLName(response?.data?.user?.last_name)
-      setProfile(response?.data?.user?.profilePicture)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    console.log('in useEffect of sidebar')
-    getUserDetails()
-  }, [])
   return (
     <>
       <div className='sidemain'>
@@ -66,7 +42,6 @@ export const Sidebar = () => {
           <div className="items"> <i className="fa-regular fa-bell icon" />Notifications</div>
           <div className="items"><i className="fa-regular fa-envelope icon" />Messages</div>
           <div className="items"><i className="fa-solid fa-list icon" />Lists</div>
-          <div className="items"><i className="fa-solid fa-users icon" />Communities</div>
           <div className="items"><i className="fa-brands fa-x-twitter icon" />Premium</div>
           <div className="items"><i className="fa-regular fa-user icon" />Profile</div>
           <div className="items"><i className="fa-solid fa-ellipsis icon" />More</div>
@@ -75,7 +50,7 @@ export const Sidebar = () => {
         <div className="submit">Post</div>
 
         <div className="account">
-          <img src={profile} alt={defImg} className="pfp" onClick={handleProfilePictureClick}/>
+          <img src={user?.profilePicture} alt={defImg} className="pfp" onClick={handleProfilePictureClick} />
           <input
             type="file"
             id="profilePicInput"
@@ -83,8 +58,8 @@ export const Sidebar = () => {
             onChange={handleProfilePictureChange}
           />
           <div className="id">
-            <div className="name">{fName} {lName}</div>
-            <div className="uname">@{fName[0]}{lName[0]}</div>
+            <div className="name">{user?.first_name} {user?.last_name}</div>
+            <div className="uname">@{user?.first_name[0]}{user?.last_name[0]}</div>
           </div>
           {/* <div className="opt"><i className="fa-solid fa-ellipsis" /></div> */}
         </div>
